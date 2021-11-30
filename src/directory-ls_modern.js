@@ -11,15 +11,12 @@ const readedFiles = (folder = "../public/", extension = /\.png/) => {
   const filteredTree = dirTree(folder, { extensions: extension });
   return filteredTree;
 };
-// console.log(readedFiles());
 const rawFiles = readedFiles().children;
 
 //2. get all names of each of this array
 const filteredFiles = rawFiles.filter((item) => {
   return item.path.match("[0-9]{10}");
 });
-const rawFilteredFiles = filteredFiles;
-// console.log({ rawFilteredFiles });
 
 //3. extract the timestamp of the name and add extend the element with the information
 let id = 1;
@@ -30,12 +27,9 @@ const manipulatedObject = rawFilteredFiles.map((obj) => ({
     obj.path.match("[0-9]{10}") * 1000
   )).toLocaleDateString("de-DE"),
 }));
-const rawManipulatedObject = manipulatedObject;
-// console.log({ rawManipulatedObject });
 
 //4. write object to a file
 const writtenObjToFile = (obj) => {
   fs.writeFileSync("sma_graphics2.json", JSON.stringify(obj));
 };
-
-writtenObjToFile(rawManipulatedObject);
+writtenObjToFile(manipulatedObject);
