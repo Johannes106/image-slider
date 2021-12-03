@@ -17,6 +17,7 @@ const rawFiles = readedFiles().children;
 const filteredFiles = rawFiles.filter((item) => {
   return item.path.match("[0-9]{10}");
 });
+const rawFilteredFiles = filteredFiles;
 
 //3. extract the timestamp of the name and add extend the element with the information
 let id = 1;
