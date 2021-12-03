@@ -31,6 +31,6 @@ const manipulatedObject = rawFilteredFiles.map((obj) => ({
 
 //4. write object to a file
 const writtenObjToFile = (obj) => {
-  fs.writeFileSync("sma_graphics2.json", JSON.stringify(obj));
+  fs.writeFileSync("sma_graphics.json", JSON.stringify(obj));
 };
 writtenObjToFile(manipulatedObject);
