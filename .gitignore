@@ -21,7 +21,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-public/p.png
-public/sma_home_1632120913.png
-public/sma_home_1632293713.png
-public/t.png
+public/sma_*
