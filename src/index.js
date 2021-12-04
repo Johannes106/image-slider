@@ -3,24 +3,22 @@ import ReactDOM from "react-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 import "./styles.css";
-import { arr } from "./data";
 
 const App = () => {
+  const jsonFile = require("./sma_graphics.json");
+
   const [value, setValue] = useState(0);
-  const dirTree = require("directory-tree");
-  const filteredTree = dirTree("../public/", { extensions: /\.png/ });
-  console.log(filteredTree);
   return (
     <>
       <div className="container">
-        <img src={arr[value].image} alt={arr[value].id} />
-        <h2>{arr[value].name}</h2>
-        <h3>{arr[value].job}</h3>
+        <img src={jsonFile[value].path} alt={jsonFile[value].id} />
+        <h2>{jsonFile[value].name}</h2>
+        <h3>{jsonFile[value].datum}</h3>
         <div>
           <button
             type="button"
             onClick={() =>
-              value === 0 ? setValue(arr.length - 1) : setValue(value - 1)
+              value === 0 ? setValue(jsonFile.length - 1) : setValue(value - 1)
             }
           >
             <BsArrowLeft />
@@ -28,7 +26,7 @@ const App = () => {
           <button
             type="button"
             onClick={() =>
-              value === arr.length - 1 ? setValue(0) : setValue(value + 1)
+              value === jsonFile.length - 1 ? setValue(0) : setValue(value + 1)
             }
           >
             <BsArrowRightShort />
