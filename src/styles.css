@@ -11,9 +11,6 @@ body {
   height: 100vh;
 }
 .container {
-  width: 500px;
-  max-width: 500px;
-  height: 350px;
   background: rgb(29, 28, 28);
   color: white;
   padding: 10px;
@@ -24,10 +21,7 @@ body {
   align-items: center;
 }
 .container img {
-  width: 200px;
-  height: 190px;
   object-fit: cover;
-  border-radius: 50%;
 }
 h2 {
   text-transform: capitalize;
@@ -51,7 +45,4 @@ h3 {
   border: none;
   outline: none;
   text-align: center;
-}
-button:active {
-  transform: scale(1.03);
 }
