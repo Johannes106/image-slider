@@ -23,6 +23,7 @@ const rawFilteredFiles = filteredFiles;
 let id = 1;
 const manipulatedObject = rawFilteredFiles.map((obj) => ({
   id: id++,
+  path: (obj.path = obj.path.replace("./public", "")),
   ...obj,
   datum: (obj.path = new Date(
     obj.path.match("[0-9]{10}") * 1000
