@@ -31,6 +31,11 @@ const manipulatedObject = rawFilteredFiles.map((obj) => ({
 
 //4. write object to a file
 const writtenObjToFile = (obj) => {
-  fs.writeFileSync("sma_graphics.json", JSON.stringify(obj));
+  let fileName = "sma_graphics.json";
+  fs.writeFileSync(fileName, JSON.stringify(obj));
+  console.log(`written JSON to ${fileName}`);
 };
-writtenObjToFile(manipulatedObject);
+
+exports.createJsonDependingOnFiles = function () {
+  writtenObjToFile(manipulatedObject);
+};
