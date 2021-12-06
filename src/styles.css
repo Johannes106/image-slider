@@ -24,12 +24,10 @@ body {
   object-fit: cover;
 }
 h2 {
-  text-transform: capitalize;
   margin-top: 10px;
   font-weight: 800;
 }
 h3 {
-  text-transform: capitalize;
   color: rgb(197, 194, 194);
 }
 .container div {
