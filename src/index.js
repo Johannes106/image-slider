@@ -5,8 +5,20 @@ import { BsArrowLeft } from "react-icons/bs";
 import "./styles.css";
 
 const App = () => {
+  require("./directory-ls_modern");
+  // let jsonFile = "";
+  // function requireJson() {
+  //   try {
+  //     jsonFile = require("./sma_graphics.json");
+  //   } catch (e) {
+  //     console.log("requireJson: The Json could not be loaded.", e);
+  //     // const jsonCreator = require("./directory-ls_modern");
+  //     // jsonCreator.createJsonDependingOnFiles();
+  //   }
+  // }
+  // requireJson();
   const jsonFile = require("./sma_graphics.json");
-
+  //require("./directory-ls_modern");
   const [value, setValue] = useState(0);
   return (
     <>
